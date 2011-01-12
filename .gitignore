@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 _drafts/
 _site/
 *~
 \#*
 .\#*
+=======
+progit.*.pdf
+*.swp
+latex/*
+!latex/makepdf
+!latex/README
+!latex/template.tex
+!latex/config.yml
+*~
+.#*
+figures/*
+>>>>>>> bfead6c2c90dfee622865cb3ebcaa36122b5fcab

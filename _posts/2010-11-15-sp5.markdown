@@ -1,0 +1,21 @@
+---
+layout: post
+title: Laboratorium SP 5
+---
+
+Zad.1_/
+		find -maxdepth 1 -type f -mtime 10
+Zad.2_/
+		find -type f -name "*conf*" 
+Zad.3_/
+		find ~  -type f -atime -20
+Zad.4_/
+		Problem ze zrobieniem
+		
+			Ad. 1
+				Zaslyszane na laborkach:
+				find \( -type f -and -name "a*" \) -or \( -type d -and ! -empty \)	
+Zad.5_/
+		rm x?? -r
+Zad.6_/
+		mkdir `date +%Y-%m-%d`

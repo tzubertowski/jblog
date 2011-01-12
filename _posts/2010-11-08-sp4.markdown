@@ -1,0 +1,26 @@
+---
+layout: post
+title: Laboratorium SP 4
+---
+Zad.1_/
+			ls -l | tr "[:lower:]" "[:upper:]"	
+Zad.2_/
+			Ad.1-> 
+			ls -l | tr -s ' ' | cat -f X,X,X - ' '
+			gdzie X,X,X to kolumny
+
+			VER.1.0-> Dziala tylko u mnie
+			ls -l | cut -b 1-10,34-37,50-
+Zad.3_/
+			Ad.1-> Poprawka, dziala tylko u mnie
+			ls -l --sort=size | cut -b 50-
+
+			VER.1.0->Pokazywala wage plikow
+Zad.4_/
+			sort -t : -k 3n /etc/passwd
+Zad.5_/
+			
+Zad.6_/
+			N/A
+Zad.7_/
+			find -printf "%m\n" | sort | uniq -c

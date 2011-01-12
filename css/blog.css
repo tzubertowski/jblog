@@ -25,7 +25,7 @@
 #logo {
   font: 256%/1 "Cyklop", "DejaVu Sans", sans-serif;
   font-style: italic;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 #logo a {
@@ -41,12 +41,12 @@ html {
   /* http://www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
   height: 100%; 
   margin-bottom: 1px;
-  background-color: #FEFEEB; 
+  background-color: #b22222; 
   margin: 0 auto 0 44px; 
 }
 
 .site {
-  background-color: white;
+  background-color: #f9f9f9;
 }
 
 .title {
@@ -147,7 +147,7 @@ pre code {
 }
 
 pre {
-  border-left: 9px solid #FD9945;
+  border-left: 11px solid #FD9945;
   margin-left: -49px;
   padding: 0 0 0 49px;
 }

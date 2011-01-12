@@ -1,0 +1,33 @@
+---
+layout: post
+title: Laboratorium SP 3
+---
+
+Zad.1_/
+			pg -5 -c /etc/passwd
+
+Zad.2_/
+			cat tekst1.txt >> tekst3.txt && cat >> 
+			tekst3.txt && cat tekst2.txt >> tekst3.txt
+
+Zad.3_/
+			head -n 5 -q ~/*
+
+Zad.4_/
+			awk 'NR >= 3 && NR <= 5' /etc/passwd
+
+Zad.5_/
+			tail -n 7 /etc/passwd | head -n 3
+
+Zad.6_/
+			cat /etc/passwd | tr -d "\n"
+
+Zad.7_/
+			cat plik.txt | tr " " "\n"
+
+Zad.8_/
+			find /etc -ls 2>/dev/null | wc -l
+
+Zad.9_/
+			head -n 3 /etc/passwd | wc -c
+

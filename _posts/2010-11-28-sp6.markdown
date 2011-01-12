@@ -1,0 +1,16 @@
+---
+layout: post
+title: Laboratorium SP 6
+---
+
+
+1.
+		grep [^\n] duze_liczby_dodawanie.c
+2.
+		grep '^[[:digit:]]' plik.txt
+3.
+		egrep '^.{8}r' plik2.txt
+4.
+		grep 'bash' /etc/passwd | wc -l
+5.
+		n/a

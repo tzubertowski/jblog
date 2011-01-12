@@ -1,0 +1,118 @@
+---
+layout: post
+title: Skrypty, cz. 1
+---
+
+1. 
+		#!/bin/bash
+		S=0    
+		if filename in *.htm
+		then          
+		for filename in *.htm                        # szuka 
+		plikow z rozszerzeniem htm 
+		do
+    		fname=$filename
+     		a=`echo $fname | sed -e "s/htm/html/g"` # podstawia html za htm
+     		mv "$fname" "$a"                        # zmienia nazwe pliku
+     		echo "$a" | grep -q " "                 # sprawdza spacje w nazwie pliku
+    		if [ $? -eq $S ]                        # zawiera spacje
+     		then
+       		fname2=$a
+       		n=`echo $fname2 | sed -e "s/ /_/g"`   # spacja na _
+      		mv "$fname2" "$n"                     # zmienia nazwe pliku
+     		fi
+		else
+		echo "Nie ma pliku z rozszerzeniem .htm"
+		done   
+		exit 0
+
+
+2.
+		#!/bin/bash
+
+		silnia () {
+
+		if [ $1 -ge 0 ]; then
+
+       		if [ $1 == 0 ] ; then
+    		wynik=1
+  		else
+    		silnia `expr $1 - 1`
+    		wynik=`expr $wynik \* $1`
+  		fi
+		else
+		echo "Bledny argument"
+		echo "Prosze podac $0 liczba"
+		exit 0
+		fi
+		}
+
+		silnia $1
+		echo Silnia z $1 jest rowna $wynik
+
+3.
+		#!/bin/bash
+
+		echo "Podaj swoj login:"
+		read login
+		if [ -z $login ]
+		then
+		login=$USER
+		fi
+
+		echo "Witaj $login. Milo cie poznac"
+		echo "Info o tobie:" 
+		echo "*Jestes zalogowany jako $LOGNAME"
+		echo "*Twoj host to $HOSTNAME"
+		echo "*Typ hosta to $HOSTTYPE"
+		echo "Twoj katalog domowy nazywa sie $HOME"
+		echo "*Katalog, w ktorym teraz sie znajdujesz to $PWD"
+		echo "Wersja Bash'a to $BASH_VERSION"
+		echo "*Twoja powloka to $SHELL"
+		echo "*Liczba uruchomionych powlok to: $SHLVL"
+		echo "*Aktualnie korzystasz z OS $OSTYPE" 
+		echo "*Uzywasz $TERM"
+		echo "*Nazwa ekranu  to $DISPLAY"
+		echo "*Shell bedzie szukal polecen w $PATH"
+		echo "*Twoj uid (identyfikator zalogowania) to $UID"
+		echo "*Architektura sprzetowa to: $MACHTYPE"
+
+		exit 0
+4.
+		 #!/bin/bash
+		for i in `find ~ -type f -mtime 3 -name core`
+		do
+		rm $i
+		done
+
+
+ad.1:
+	Nie dziala, ale jest blisko:
+
+#!/bin/bash
+
+S=0
+
+if filename in *.htm
+then
+        for filename in *.htm                        # przeglada pliki z 
+rozsze$
+        do
+        fname=$filename
+        a=`echo $fname | sed -e "s/htm/html/g"` # podstawia html za htm
+        mv "$fname" "$a"
+
+        echo "$a" | grep -q " "
+        if [ $? -eq $S ]
+        then
+        fname2=$a
+        n=`echo $fname2 | sed -e "s/ /_/g"`
+        mv "$fname2" "$n"
+        fi
+
+else
+echo "Nie ma plikow z rozszerzeniem htm"
+fi
+done
+
+exit 0
